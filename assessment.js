@@ -9,45 +9,45 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-let nfts = [];
+let nfts =[];
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT(name, eyecolor, shirttype, bling) {
+function mintNFT(name, eyeColor, shirtType, bling) {
     const nft = {
-        name: name,
-        eyecolor: eyecolor,
-        shirttype: shirttype,
-        bling: bling
+   name: name,
+   eyeColor: eyeColor,
+   shirtType: shirtType,
+   bling: bling
     };
     nfts.push(nft);
 }
-
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs() {
     nfts.forEach((nft, index) => {
-        console.log(`NFT ${index + 1}:`);
-        console.log(`Name: ${nft.name}`);
-        console.log(`Eye Color: ${nft.eyecolor}`);
-        console.log(`Shirt Type: ${nft.shirttype}`);
-        console.log(`Bling: ${nft.bling}`);
-        console.log('--------------------------');
+   console.log(`NFT ${index + 1}:`);
+   console.log(`Name: ${nft.name}`);
+   console.log(`Eye Color: ${nft.eyeColor}`);
+   console.log(`Shirt Type: ${nft.shirtType}`);
+    console.log(`Bling: ${nft.bling}`);
+   console.log('------------------------');
     });
 }
 
 // print the total number of NFTs we have minted to the console
-function TotalSupply() {
+function getTotalSupply() {
     return nfts.length;
 }
-
 // call your functions below this line
-
 mintNFT('CryptoPunk', 'blue', 't-shirt', 'gold chain');
 mintNFT('BoredApe', 'green', 'hoodie', 'diamond ring');
 mintNFT('CoolCat', 'brown', 'sweater', 'silver necklace');
 
 listNFTs();
 
-console.log(`Total Supply: ${TotalSupply()}`);
+console.log(`Total Supply: ${getTotalSupply()}`);
+
+
+
